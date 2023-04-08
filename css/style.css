@@ -173,31 +173,390 @@ img {
 }
 
 .category-link {
+    position: relative;
     min-height: 280px;
+    cursor: pointer;
+}
+
+.category-link:hover::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
 }
 
 .category-link:nth-child(1) {
     grid-area: img1;
-    background: url(../img/grid-1.png) 0%/cover no-repeat;
+    background: url(../img/grid-1.png) 50% 0%/cover no-repeat;
 
 }
 
 .category-link:nth-child(2) {
     grid-area: img2;
-    background: url(../img/grid-2.png) 0%/cover no-repeat;
+    background: url(../img/grid-2.png) 50% 0%/cover no-repeat;
 
 }
 
 .category-link:nth-child(3) {
     grid-area: img3;
-    background: url(../img/grid-3.png) 0%/cover no-repeat;
+    background: url(../img/grid-3.png) 50% 0%/cover no-repeat;
 
 }
 
 .category-link:nth-child(4) {
     grid-area: img4;
-    background: url(../img/grid-4.png) 0%/cover no-repeat;
+    background: url(../img/grid-4.png) 50% 0%/cover no-repeat;
 
 }
 
-.category-name {}
+.category-name {
+    position: absolute;
+    padding-top: 3px;
+    width: 203px;
+    height: 35px;
+    background: #ffff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #22262A;
+    text-transform: uppercase;
+    bottom: 25px;
+    left: 5%;
+    opacity: 0;
+}
+
+.category-link:hover .category-name {
+    opacity: 1;
+}
+
+/* ----------------women's fashion */
+.women-fashion {
+    padding-top: 111px;
+    color: #22262A;
+}
+
+.text-h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-p {
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.women-flex {
+    padding-top: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.women-flex-item .pic:hover {
+    cursor: pointer;
+}
+
+.brand-p {
+    padding-top: 38px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.clothes {
+    padding-top: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.prices {
+    padding-top: 3px;
+    display: flex;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.old-price {
+    margin-right: 25px;
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: #CF2929;
+}
+
+.men-fashion {
+    padding-top: 111px;
+}
+
+/* --------------------------avone fashion */
+.avone-styles {
+    padding-top: 111px;
+
+
+}
+
+.avone-style {
+    height: 750px;
+    padding-top: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.avone-style-left {
+    width: 49%;
+    height: 100%;
+    background: url(../img/av1.png) 50% 100%/550px no-repeat;
+}
+
+.avone-style-right {
+    position: relative;
+    width: 49%;
+    height: 100%;
+    background: url(../img/av2.png) 0% 0%/515px no-repeat;
+}
+
+.avone-style-right::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    height: 303px;
+    width: 252px;
+    background: #fff url(../img/av3.png) 100% 100%/227px 281px no-repeat;
+}
+
+.show-womens-dress {
+    position: absolute;
+    top: 650px;
+    left: 100px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.show-womens-dress:hover {
+    color: #676c70;
+}
+
+.show-womens-dress::after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #22262A;
+    transition: .4s;
+}
+
+.show-womens-dress:hover::after {
+    background-color: #676c70;
+}
+
+/* ---------------banner */
+.banner {
+    margin-top: 121px;
+    min-height: 745px;
+    background-image: url(../img/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-h2,
+.banner-p {
+    color: #22262A;
+}
+
+.banner-content {
+    padding-top: 434px;
+}
+
+.banner-button {
+    width: 214px;
+}
+
+/* ---------------footer */
+.footer {
+    padding-top: 115px;
+    color: #22262A;
+    background-color: #F2F8FC;
+}
+
+.footer-flex {
+    display: flex;
+}
+
+.footer-left {
+    max-width: 450px;
+}
+
+.footer-h2 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 17px;
+}
+
+.footer-p,
+.adress,
+.mail,
+.numbers {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.adress {
+    padding-top: 41px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.adress::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url(../img/location.png) 50% 50%/100% no-repeat;
+    transform: translateY(80%);
+}
+
+.mail {
+    padding-top: 16px;
+    position: relative;
+}
+
+.mail::after {
+    position: absolute;
+    content: '';
+    width: 41%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background: #22262A;
+
+}
+
+.numbers {
+    padding-top: 7px;
+}
+
+.socio {
+    padding-top: 16px;
+}
+
+.socio img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-right {
+    padding-left: 196px;
+}
+
+.footer-form {
+
+    padding: 10px 25px;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 485px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+}
+
+.footer-form-email {
+    width: 100%;
+    border: none;
+    color: inherit;
+    outline: none;
+    font: inherit;
+}
+
+.footer-form-btn {
+    color: inherit;
+    font: inherit;
+    width: 50px;
+    background: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: 5px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.footer-form-btn:hover {
+    color: #fff;
+    background: #22262A;
+
+}
+
+.footer-nav {
+    display: flex;
+    gap: 120px;
+    padding-top: 70px;
+}
+
+.footer-nav-item:nth-child(2) {
+    margin-right: 50px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav li {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 21px;
+    transition: .4s;
+}
+
+.footer-nav li:hover {
+    color: #676c70;
+}
+
+.footer-nav-title {
+    margin-bottom: 27px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.after-footer {
+    margin-top: 20px;
+    background-color: #F2F8FC;
+    min-height: 93px;
+}
+
+.after-footer-text {
+    padding-top: 46px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
