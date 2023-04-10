@@ -16,6 +16,12 @@ body {
     font-weight: 400;
 }
 
+html.dark,
+.dark body {
+    background: #373737;
+    color: #fff;
+}
+
 a {
     list-style: none;
     color: inherit;
@@ -52,6 +58,10 @@ img {
 /*--------------------------------header*/
 .header {
     color: #22262A;
+}
+
+.dark .header {
+    color: #F2F8FC;
 }
 
 .header-flex {
@@ -108,6 +118,14 @@ img {
     background-image: url(../img/1\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.dark .new-trend-content {
+    color: #22262A;
+}
+
+.new-trend-content {
+    color: #22262A;
 }
 
 .new-trend-content {
@@ -238,6 +256,10 @@ img {
 .women-fashion {
     padding-top: 111px;
     color: #22262A;
+}
+
+.dark .women-fashion {
+    color: #F2F8FC;
 }
 
 .text-h2 {
@@ -398,6 +420,12 @@ img {
     color: #22262A;
     background-color: #F2F8FC;
 }
+
+.dark .footer {
+    color: #F2F8FC;
+    background-color: #22262A;
+}
+
 
 .footer-flex {
     display: flex;
